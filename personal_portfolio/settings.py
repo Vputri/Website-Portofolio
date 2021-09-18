@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%al$gjxh4%*wdwn@)qce$j_ry4u#c!fnc3$ys(l&+7o6w9_z+9'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vputri.herokuapp.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -11,6 +11,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'projects',
     'ckeditor',
     'blog',
@@ -23,6 +24,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'personal_portfolio.urls'
@@ -79,7 +81,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,"static_files")
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
