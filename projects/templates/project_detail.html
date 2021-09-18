@@ -11,16 +11,14 @@
 		    </div>
 
         <div class="isi-detail">
-          <div class="item-gambar"><img src="{% static project.image %}" width="60%"></div>
+          <div class="item-gambar"><img src="{{ project.image.url }}" width="60%"></div>
           <div>
 
           <div class="item-info">
             <br>
-            <h3>About the project:</h3>
-            <p class="deskripsi">{{ project.description }}</p>
+            <h3>About the project:</h3><br>
+            <p class="deskripsi">{{ project.description|safe }}</p>
             <br>
-            <h3>Technology used:</h3>
-            <p class="deskripsi">{{ project.technology }}</p>
           </div>
         </div>
     </div>

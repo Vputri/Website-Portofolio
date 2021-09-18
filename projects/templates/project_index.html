@@ -43,7 +43,7 @@
 							<div class="row">
 								<div class="about-text add">
 									<h3>Vika Putri Ariyanti</h3>
-									<p>Hi, my name is Vika Putri Ariyanti. I am a final year Informatics Engineering Students at Gunadarma University. I am interested in Machine Learning and Web Programming.</p>
+									<p>Hi, my name is Vika Putri Ariyanti. I am a fresh graduate of Informatics Engineering. I am interested in Machine Learning and Web Programming.</p>
 								</div>
 							</div>
 
@@ -53,22 +53,9 @@
 
 									<div class="row">
 										<div class="info-item add">
-											<p>Gender : <span>Female</span></p>
-										</div>
-										<div class="info-item add">
-											<p>Marital Status : <span>Single</span></p>
-										</div>
-										<div class="info-item add">
 											<p>Address : <span>South Jakarta</span></p>
-										</div>
-										<div class="info-item add">
-											<p>Nasionality : <span>Indonesia</span></p>
-										</div>
-										<div class="info-item add">
-											<p>Email : <span>vikaputriariyanti@gmail.com</span></p>
-										</div>
-										<div class="info-item add">
-											<p>Telepon : <span>-</span></p>
+											<p>Email : <span>vikaputriariyanti@gmail.com</span>
+											<p>Website : <span>vputri.herokuapp.com</span>
 										</div>
 									</div>
 
@@ -83,12 +70,12 @@
 									<div class="row add margin">
 										<h3 class="title">Skill</h3>
 										<div class="skill-item">
-											<h5>HTML</h5>
-											<h5>CSS</h5>
+											<h5>Django</h5>
+											<h5>Bootstrap</h5>
 											<h5>Python</h5>
-											<h5>Java</h5>
 											<h5>Git</h5>
 											<h5>SQL</h5>
+											<h5>Machine Learning</h5>
 										</div>
 									</div>
 								</div>
@@ -175,11 +162,11 @@
 						<div class="item padd-15">
 							<div class="item-inner shadow-dark">
 								<div class="item-img">
-									<img src="{% static project.image %}">
+									<img src="{{ project.image.url }}">
 								</div>
 								<div class="item-info">
 									<h4 class="judul">{{ project.title }}</h4>
-									<p class="deskripsi">{{ project.description }}</p>
+									<p class="deskripsi">{{ project.description|safe|truncatewords:10 }}</p><br>
                                     <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Read More</a>
 								</div>
 							</div>
