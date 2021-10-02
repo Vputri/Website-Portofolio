@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%al$gjxh4%*wdwn@)qce$j_ry4u#c!fnc3$ys(l&+7o6w9_z+9'
 DEBUG = True
-ALLOWED_HOSTS = ['vputri.herokuapp.com']
+ALLOWED_HOSTS = ['vputri.herokuapp.com', '127.0.0.1']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
