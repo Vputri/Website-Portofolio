@@ -1,47 +1,40 @@
 {% load static %}
+	<title>Vika's Portofolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'pink.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <script src="{% static 'scripts.js' %}" type="text/javascript"></script>  
- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<style>
+		.mystyle{
+			left: 0px;
+		}
+	</style>
 	<!--Main Container-->
 	<div class="main-container">
 		<!--Aside-->
-		<div class="aside" id="aside">
-			<!--Nav Toggle Button-->
-			<div class="nav-toggler" onclick="myFunc()">
-				<span></span>
-			</div>
-			<!--Nav Toggle Button End-->
+		<div class="aside">
 
-			<!--Logo-->
-			<div class="logo">
-				<a href="#">VPUTRIA</a>
-			</div>
-			<!--Logo End-->
-						
+			<div class="atas">
+				<!--Nav Toggle Button-->
+				<div class="nav-toggler" id="coba" onclick="myFunc()">
+					<span></span>
+				</div>
+				<!--Nav Toggle Button End-->
+
+				<!--Logo-->
+				<div class="logo">
+					<a href="#">VPUTRIA</a>
+				</div>
+				<!--Logo End-->
+			</div>		
+
 			<!--Nav-->
 			<ul class="nav">
-				<li>
-					<a onclick="myFunc()" href="{% url 'project_index' %}">
-					<i class="fa fa-home"></i>Home</a>
-				</li>
-				<li>
-					<a onclick="myFunc()" href="{% url 'project_index' %}#about">
-					<i class="fa fa-user"></i>About</a>
-				</li>
-				<li>
-					<a onclick="myFunc()" href="{% url 'project_index' %}#education">
-					<i class="fa fa-list"></i>Education</a>
-				</li>
-				<li>
-					<a onclick="myFunc()" href="{% url 'project_index' %}#portfolio">
-					<i class="fa fa-briefcase"></i>Project</a>
-				</li>
-				<li class="isi">
-					<a onclick="myFunc()" href="{% url 'blog_index' %}">
-					<i class="fa fa-blog"></i>Blog</a>
-				</li>
+				<li><a onclick="myFunc()" href="#home"><i class="fa fa-home"></i>Home</a></li>
+				<li><a onclick="myFunc()" href="#about"><i class="fa fa-user"></i>About</a></li>
+				<li><a onclick="myFunc()" href="#education"><i class="fa fa-list"></i>Education</a></li>
+				<li><a onclick="myFunc()" href="#portfolio"><i class="fa fa-briefcase"></i>Project</a></li>
 			</ul>
 			<!--Nav End-->
 
@@ -50,7 +43,6 @@
 				Vika Putri Ariyanti &copy 2021
 			</div>
 			<!--Copyrigh End-->
-
 		</div>
 		<!--Aside End-->
 
@@ -62,3 +54,9 @@
 
 	</div>
 	<!--Main Container End-->
+	<script type="text/javascript">
+	let x = document.querySelector(".aside");
+	function myFunc() {
+		x.classList.toggle("mystyle")
+	}
+	</script>
